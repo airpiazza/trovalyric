@@ -12,12 +12,12 @@ function App() {
 }
 
 function Header(){
-  return React.createElement('h1', null, 'trovalyric');
+  return React.createElement('h1', {className: 'title-header' }, 'trovalyric');
 }
 
 function Description(){
   return (
-    <p>
+    <p className="description">
       Straight up lyrics.      
     </p>
   )

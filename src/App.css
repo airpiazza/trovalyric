@@ -1,5 +1,9 @@
 .App {
   text-align: center;
+  background-color: #0e8ba1;
+  padding-top: 8em;
+  padding-bottom: 8em;
+  color: #491980;
 }
 
 .App-logo {
@@ -35,4 +39,18 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.title-header{
+  font-size: calc(80px + 3vmin);
+  font-family: 'Manrope', 'Times New Roman';
+  font-weight: 800;
+  margin-bottom: 0;
+}
+
+.description {
+  font-size: calc(15px + 2vmin);
+  font-family: 'Manrope', 'Times New Roman';
+  font-weight: 500;
+  margin-top: 0;
 }
