@@ -7,6 +7,8 @@ function App() {
     <div className="App">
       <Header />
       <Description />
+      <TextBoxes />
+      <Search />
     </div>
   );
 }
@@ -20,6 +22,43 @@ function Description(){
     <p className="description">
       Straight up lyrics.      
     </p>
+  )
+}
+
+function Artist(){
+  return(
+    <div>
+      <label for="artist" className="label" >Artist</label>
+      <br />
+      <input type="text" id="artist" name="artist" className="text-box" placeholder="   Enter artist name here..."/>
+    </div>
+  )
+}
+
+function Title(){
+  return(
+    <div>
+      <label for="title" className="label" id="title-label">Title</label>
+      <br />
+      <input type="text" id="title" name="title" className="text-box" placeholder="   Enter song title here..."/>
+    </div>
+  )
+}
+
+function TextBoxes(){
+  return(
+    <div className="text-boxes">
+        <Artist />
+        <Title />
+      </div>
+  )
+}
+
+function Search(){
+  return(
+    <button>
+      Search
+    </button>
   )
 }
 
