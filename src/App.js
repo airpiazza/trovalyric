@@ -7,8 +7,7 @@ function App() {
     <div className="App">
       <Header />
       <Description />
-      <TextBoxes />
-      <Search />
+      <Form />
     </div>
   );
 }
@@ -25,38 +24,50 @@ function Description(){
   )
 }
 
-function Artist(){
+function Artist(props){
   return(
     <div>
       <label for="artist" className="label" >Artist</label>
       <br />
-      <input type="text" id="artist" name="artist" className="text-box" placeholder="   Enter artist name here..."/>
+      <input type="text" id="artist" name="artist" className="text-box" placeholder="   Enter artist name here..." value={props.artist} onChange={(event) => props.change(event.target.value)}/>
     </div>
   )
 }
 
-function Title(){
+function Title(props){
   return(
     <div>
       <label for="title" className="label" id="title-label">Title</label>
       <br />
-      <input type="text" id="title" name="title" className="text-box" placeholder="   Enter song title here..."/>
+      <input type="text" id="title" name="title" className="text-box" placeholder="   Enter song title here..." value={props.title} onChange={(event) => props.change(event.target.value)}/>
     </div>
   )
 }
 
-function TextBoxes(){
+function Form(){
+  const [artist, setArtist] = React.useState("");
+  const [title, setTitle] = React.useState("");
+
+
   return(
-    <div className="text-boxes">
-        <Artist />
-        <Title />
-      </div>
+    <>
+      <form className="form">
+          <Artist artist={ artist } change ={setArtist}/>
+          <Title title={ title } change={setTitle}/>
+      </form>
+      <Search artist={ artist } title={ title }/>
+    </>
   )
 }
 
-function Search(){
+function Search(props){
+  
+  function displayInfo(e){
+    console.log(props.artist + " " + props.title)
+  }
+
   return(
-    <button>
+    <button className="search-button" onClick={displayInfo}>
       Search
     </button>
   )
