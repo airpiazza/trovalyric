@@ -7,7 +7,7 @@ function App() {
     <div className="App">
       <Header />
       <Description />
-      <Form />
+      <Song />
     </div>
   );
 }
@@ -27,7 +27,7 @@ function Description(){
 function Artist(props){
   return(
     <div>
-      <label for="artist" className="label" >Artist</label>
+      <label htmlFor="artist" className="label" >Artist</label>
       <br />
       <input type="text" id="artist" name="artist" className="text-box" placeholder="   Enter artist name here..." value={props.artist} onChange={(event) => props.change(event.target.value)}/>
     </div>
@@ -37,14 +37,14 @@ function Artist(props){
 function Title(props){
   return(
     <div>
-      <label for="title" className="label" id="title-label">Title</label>
+      <label htmlFor="title" className="label" id="title-label">Title</label>
       <br />
       <input type="text" id="title" name="title" className="text-box" placeholder="   Enter song title here..." value={props.title} onChange={(event) => props.change(event.target.value)}/>
     </div>
   )
 }
 
-function Form(){
+function Song(){
   const [artist, setArtist] = React.useState("");
   const [title, setTitle] = React.useState("");
 
@@ -61,16 +61,90 @@ function Form(){
 }
 
 function Search(props){
+
+  const [artist, setArtist] = React.useState("");
+  const [title, setTitle] = React.useState("");
+  const [lyrics, setLyrics] = React.useState("");
+  const [alreadyLoaded, setAlreadyLoaded] = React.useState(false);
+  const [errore, setErrore] = React.useState(null);
   
   function displayInfo(e){
-    console.log(props.artist + " " + props.title)
+    console.log(props.artist + " " + props.title);
+    setAlreadyLoaded(false)
+    setArtist(props.artist);
+    setTitle(props.title);
+    fetch("https://api.lyrics.ovh/v1/"+props.artist+"/"+props.title)
+      .then(res => res.json())
+      .then(
+        (result) => {
+          setAlreadyLoaded(true);
+          setLyrics(result.lyrics);
+        },
+        (error) => {
+          setAlreadyLoaded(true);
+          setErrore(error)
+          setLyrics("sorry, couldn't find lyrics for this song");
+        }
+      );
   }
-
-  return(
-    <button className="search-button" onClick={displayInfo}>
-      Search
-    </button>
-  )
+  if(artist=="" && title==""){  
+    return(
+      <>
+        <button className="search-button" onClick={displayInfo}>
+          Search
+        </button>
+        <h3>
+        </h3>
+        <p>
+          {lyrics}
+        </p>
+      </>
+    )
+  }else if(errore){
+    return(
+      <>
+        <button className="search-button" onClick={displayInfo}>
+          Search
+        </button>
+        <h3>
+          Sorry, there's been an error: {errore.message}
+        </h3>
+        <p>
+          {lyrics}
+        </p>
+      </>
+    )
+  } else if(!alreadyLoaded){
+    return(
+      <>
+        <button className="search-button" onClick={displayInfo}>
+          Search
+        </button>
+        <h3>
+          Looking for your song...
+        </h3>
+        <p>
+          {""}
+        </p>
+      </>
+    )
+  } else{
+    return(
+      <>
+        <button className="search-button" onClick={displayInfo}>
+          Search
+        </button>
+        <h3>
+          {title + " by " + artist}
+        </h3>
+        <p>
+          {lyrics}
+        </p>
+      </>
+    )
+  }
+  
 }
+
 
 export default App;
