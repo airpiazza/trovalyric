@@ -1,9 +1,9 @@
 .App {
   text-align: center;
-  background-color: #0e8ba1;
-  padding-top: 8em;
-  padding-bottom: 8em;
+  background-color: #03768a;
+  padding-top: 5em;
   color: #491980;
+  min-height: 100vh;
 }
 
 .App-logo {
@@ -66,7 +66,7 @@
   border-radius: 50px;
   min-height: 2.5em;
   border-style: solid;
-  border-color: #0e8ba1;
+  border-color: #03768a;
   min-width: 20em;
 }
 
@@ -103,7 +103,14 @@
 }
 
 .search-button:hover{
-  background-color: #0e8ba1;
+  background-color: #03768a;
   color: #491980;
   font-weight: bold;
+}
+
+.song-info{
+  margin-top: 2.5em;
+  color: white;
+  font-family: "Manrope", sans-serif;
+  font-size: 2rem;
 }
