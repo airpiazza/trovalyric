@@ -79,6 +79,7 @@ function Search(props){
         (result) => {
           setAlreadyLoaded(true);
           setLyrics(result.lyrics);
+          console.log(lyrics)
         },
         (error) => {
           setAlreadyLoaded(true);
@@ -167,7 +168,7 @@ function Search(props){
         <h3 className="song-info">
           {title + " by " + artist}
         </h3>
-        <p>
+        <p className="lyrics">
           {lyrics}
         </p>
       </>
