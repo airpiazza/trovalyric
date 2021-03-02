@@ -87,7 +87,7 @@ function Search(props){
         }
       );
   }
-  if(artist=="" && title==""){  
+  if(artist==="" && title===""){  
     return(
       <>
         <button className="search-button" onClick={displayInfo}>
@@ -96,35 +96,65 @@ function Search(props){
         <h3>
         </h3>
         <p>
-          {lyrics}
         </p>
       </>
     )
   }else if(errore){
-    return(
-      <>
-        <button className="search-button" onClick={displayInfo}>
-          Search
-        </button>
-        <h3>
-          Sorry, there's been an error: {errore.message}
-        </h3>
-        <p>
-          {lyrics}
-        </p>
-      </>
-    )
+    if(artist !== "" && title !== ""){
+      if(!alreadyLoaded){
+        return(
+          <>
+            <button className="search-button" onClick={displayInfo}>
+              Search
+            </button>
+            <h3 className="song-info">
+              {title + " by " + artist}
+            </h3>
+            <p>
+              Looking for your song...
+            </p>
+          </>
+        )
+      }else{
+        return(
+          <>
+            <button className="search-button" onClick={displayInfo}>
+              Search
+            </button>
+            <h3 className="song-info">
+              {title + " by " + artist}
+            </h3>
+            <p>
+              {lyrics}
+            </p>
+          </>
+        )
+      }
+    } else{
+      return(
+        <>
+          <button className="search-button" onClick={displayInfo}>
+            Search
+          </button>
+          <h3 className="song-info">
+            Sorry, there's been an error: {errore.message}
+          </h3>
+          <p>
+          </p>
+        </>
+      )
+    }
   } else if(!alreadyLoaded){
     return(
       <>
         <button className="search-button" onClick={displayInfo}>
           Search
         </button>
-        <h3>
-          Looking for your song...
+        <h3 className="song-info">
+          {title + " by " + artist}
         </h3>
         <p>
-          {""}
+          Looking for your song...
         </p>
       </>
     )
@@ -134,7 +164,7 @@ function Search(props){
         <button className="search-button" onClick={displayInfo}>
           Search
         </button>
-        <h3>
+        <h3 className="song-info">
           {title + " by " + artist}
         </h3>
         <p>
