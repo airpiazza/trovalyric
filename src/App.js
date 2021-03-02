@@ -125,7 +125,7 @@ function Search(props){
             <h3 className="song-info">
               {title + " by " + artist}
             </h3>
-            <p>
+            <p className="lyrics">
               {lyrics}
             </p>
           </>
