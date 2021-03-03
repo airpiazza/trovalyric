@@ -94,6 +94,11 @@
   .title-header{
     font-size: 12vw;
   }
+
+  .lyrics{
+    margin-left: 50px;
+    margin-right: 50px;
+  }
 }
 
 .search-button{
