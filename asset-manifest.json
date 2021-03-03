@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/trovalyric/static/css/main.08c0e163.chunk.css",
-    "main.js": "/trovalyric/static/js/main.53ecc6fe.chunk.js",
-    "main.js.map": "/trovalyric/static/js/main.53ecc6fe.chunk.js.map",
+    "main.js": "/trovalyric/static/js/main.880a07ba.chunk.js",
+    "main.js.map": "/trovalyric/static/js/main.880a07ba.chunk.js.map",
     "runtime-main.js": "/trovalyric/static/js/runtime-main.c3eb4d02.js",
     "runtime-main.js.map": "/trovalyric/static/js/runtime-main.c3eb4d02.js.map",
     "static/js/2.db57ebe5.chunk.js": "/trovalyric/static/js/2.db57ebe5.chunk.js",
@@ -17,6 +17,6 @@
     "static/js/runtime-main.c3eb4d02.js",
     "static/js/2.db57ebe5.chunk.js",
     "static/css/main.08c0e163.chunk.css",
-    "static/js/main.53ecc6fe.chunk.js"
+    "static/js/main.880a07ba.chunk.js"
   ]
 }
