@@ -8,6 +8,7 @@ function App() {
       <Header />
       <Description />
       <Song />
+      <Credit />
     </div>
   );
 }
@@ -175,6 +176,16 @@ function Search(props){
     )
   }
   
+}
+
+function Credit(){
+  return(
+    <footer className="credit">
+      <p>
+        Made using the <a target="_blank" href="https://lyricsovh.docs.apiary.io/#">lyrics.ovh API</a>
+      </p>
+    </footer>
+  )
 }
 
 

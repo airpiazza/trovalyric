@@ -5,6 +5,7 @@
   color: #491980;
   min-height: 100vh;
   font-family: 'Manrope', 'sans-serif';
+  padding-bottom: 5em;
 }
 
 .App-logo {
@@ -121,5 +122,10 @@
   font-family: "Manrope", sans-serif;
   color: white;
   font-size: 1rem;
-  margin-bottom: 3em;
+}
+
+.credit{
+  position: absolute;
+  top: 0px;
+  right: 15px;
 }
