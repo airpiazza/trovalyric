@@ -86,9 +86,7 @@ function Search(props){
         (error) => {
           setAlreadyLoaded(true);
           setErrore(error)
-          if(lyrics === ""){
-            setLyrics("sorry, couldn't find lyrics for this song");
-          }
+          setMessage("sorry, couldn't find lyrics for this song");
         }
       );
   }
@@ -133,6 +131,9 @@ function Search(props){
             <p className="lyrics">
               {lyrics}
             </p>
+            <p>
+              {message}
+            </p>
           </>
         )
       }
@@ -176,6 +177,9 @@ function Search(props){
         </h3>
         <p className="lyrics">
           {lyrics}
+        </p>
+        <p>
+          {message}
         </p>
       </>
     )
