@@ -115,6 +115,7 @@ function Search(props){
             <p>
               Looking for your song...
             </p>
+            <div class="spinner"/>
           </>
         )
       }else{
@@ -158,6 +159,7 @@ function Search(props){
         <p>
           Looking for your song...
         </p>
+        <div class="spinner"/>
       </>
     )
   } else{

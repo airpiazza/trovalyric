@@ -129,3 +129,20 @@
   top: 0px;
   right: 15px;
 }
+
+.spinner{
+  border: 7px solid #bababa;
+  border-bottom: 7px solid #491980;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spinning 1.5s linear infinite;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1em;
+}
+
+@keyframes spinning{
+  0%{ transform: rotate(0turn);}
+  100%{transform: rotate(1turn);}
+}
