@@ -85,7 +85,9 @@ function Search(props){
         (error) => {
           setAlreadyLoaded(true);
           setErrore(error)
-          setLyrics("sorry, couldn't find lyrics for this song");
+          if(lyrics === ""){
+            setLyrics("sorry, couldn't find lyrics for this song");
+          }
         }
       );
   }
