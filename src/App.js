@@ -68,6 +68,7 @@ function Search(props){
   const [lyrics, setLyrics] = React.useState("");
   const [alreadyLoaded, setAlreadyLoaded] = React.useState(false);
   const [errore, setErrore] = React.useState(null);
+  const [message, setMessage] = React.useState("");
   
   function displayInfo(e){
     console.log(props.artist + " " + props.title);
