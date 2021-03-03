@@ -131,7 +131,7 @@ function Search(props){
             <p className="lyrics">
               {lyrics}
             </p>
-            <p>
+            <p className="message">
               {message}
             </p>
           </>
@@ -178,7 +178,7 @@ function Search(props){
         <p className="lyrics">
           {lyrics}
         </p>
-        <p>
+        <p className="message">
           {message}
         </p>
       </>
