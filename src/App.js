@@ -1,6 +1,6 @@
 // import logo from './logo.svg';
 import './App.css';
-import React from 'react'
+import React, { useEffect } from 'react'
 
 function App() {
   return (
@@ -81,7 +81,6 @@ function Search(props){
         (result) => {
           setAlreadyLoaded(true);
           setLyrics(result.lyrics);
-          console.log(lyrics)
         },
         (error) => {
           setAlreadyLoaded(true);
@@ -90,6 +89,11 @@ function Search(props){
         }
       );
   }
+
+  useEffect(() =>{
+    console.log(lyrics)
+  })
+
   if(artist==="" && title===""){  
     return(
       <>
@@ -163,7 +167,7 @@ function Search(props){
         <p>
           Looking for your song...
         </p>
-        <div class="spinner"/>
+        <div className="spinner"/>
       </>
     )
   } else{
@@ -191,7 +195,7 @@ function Credit(){
   return(
     <footer className="credit">
       <p>
-        Made using the <a target="_blank" href="https://lyricsovh.docs.apiary.io/#">lyrics.ovh API</a>
+        Made using the <a target="_blank" rel="noreferrer" href="https://lyricsovh.docs.apiary.io/#">lyrics.ovh API</a>
       </p>
     </footer>
   )
