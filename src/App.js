@@ -1,4 +1,5 @@
 // import logo from './logo.svg';
+import theLogo from './t_logo.png';
 import './App.css';
 import React, { useEffect } from 'react'
 
@@ -204,6 +205,7 @@ function Search(props){
 function Menu(){
   return(
     <header className="top-bar">
+      <img src={theLogo} alt="trovalyric logo" className="trovalyric-logo"/>
       <nav>
         <ul>
           info
