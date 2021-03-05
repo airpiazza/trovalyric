@@ -166,3 +166,10 @@
   color: #491980;
   font-size: 1rem;
 }
+.top-bar{
+  position: fixed;
+  top: 0px;
+  width: 100vw;
+  height: 60px;
+  background-color: white;
+}

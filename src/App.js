@@ -5,10 +5,10 @@ import React, { useEffect } from 'react'
 function App() {
   return (
     <div className="App">
+      <Menu />
       <Header />
       <Description />
       <Song />
-      <Credit />
     </div>
   );
 }
@@ -191,15 +191,26 @@ function Search(props){
   
 }
 
-function Credit(){
+// function Credit(){
+//   return(
+//     <footer className="credit">
+//       <p>
+//         Made using the <a target="_blank" rel="noreferrer" href="https://lyricsovh.docs.apiary.io/#">lyrics.ovh API</a>
+//       </p>
+//     </footer>
+//   )
+// }
+
+function Menu(){
   return(
-    <footer className="credit">
-      <p>
-        Made using the <a target="_blank" rel="noreferrer" href="https://lyricsovh.docs.apiary.io/#">lyrics.ovh API</a>
-      </p>
-    </footer>
+    <header className="top-bar">
+      <nav>
+        <ul>
+          info
+        </ul>
+      </nav>
+    </ header>
   )
 }
-
 
 export default App;
