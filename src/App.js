@@ -206,7 +206,7 @@ function Menu(){
   return(
     <header className="top-bar">
       <img src={theLogo} alt="trovalyric logo" className="trovalyric-logo"/>
-      <nav>
+      <nav className="nav">
         <ul>
           info
         </ul>
