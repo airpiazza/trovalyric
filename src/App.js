@@ -2,14 +2,28 @@
 import theLogo from './t_logo.png';
 import './App.css';
 import React, { useEffect } from 'react'
+import {
+  BrowserRouter,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom"
 
 function App() {
   return (
     <div className="App">
-      <Menu />
-      <Header />
-      <Description />
-      <Song />
+      <Switch>
+        <Route path="/info">
+        <Menu />
+          <Info />
+        </Route>
+        <Route path="/">
+          <Menu />
+          <Header />
+          <Description />
+          <Song />
+        </Route>
+      </Switch>
     </div>
   );
 }
@@ -205,14 +219,20 @@ function Search(props){
 function Menu(){
   return(
     <header className="top-bar">
-      <img src={theLogo} alt="trovalyric logo" className="trovalyric-logo"/>
+      <Link to="/">
+        <img src={theLogo} alt="trovalyric logo" className="trovalyric-logo"/>
+      </Link>
       <nav className="nav">
-        <ul>
-          info
-        </ul>
+        <Link to="/info">info</Link>
       </nav>
     </ header>
   )
+}
+
+function Info(){
+  return(
+    <h1>Info</h1>
+  );
 }
 
 export default App;
