@@ -138,9 +138,8 @@
 }
 
 .credit{
-  position: absolute;
-  top: 0px;
-  right: 15px;
+  margin-top: 4.5em;
+  font-size: 2.5rem;
 }
 
 .spinner{
@@ -189,4 +188,24 @@
   width: 200px;
   font-size: 1.57rem;
   top: 20px;
+}
+
+@media(max-width: 1080px){
+  .nav{
+    right: 5%;
+  }
+
+  .trovalyric-logo{
+    left: 10%;
+  }
+}
+
+@media(max-width: 645px){
+  .nav{
+    right: -5%;
+  }
+
+  .trovalyric-logo{
+    left: 5%;
+  }
 }

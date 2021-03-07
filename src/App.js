@@ -3,10 +3,10 @@ import theLogo from './t_logo.png';
 import './App.css';
 import React, { useEffect } from 'react'
 import {
-  BrowserRouter,
   Switch,
   Route,
-  Link
+  Link,
+  useRouteMatch
 } from "react-router-dom"
 
 function App() {
@@ -206,15 +206,13 @@ function Search(props){
   
 }
 
-// function Credit(){
-//   return(
-//     <footer className="credit">
-//       <p>
-//         Made using the <a target="_blank" rel="noreferrer" href="https://lyricsovh.docs.apiary.io/#">lyrics.ovh API</a>
-//       </p>
-//     </footer>
-//   )
-// }
+function Credit(){
+  return(
+    <p className="credit">
+      Trovalyric was made using the <a target="_blank" rel="noreferrer" href="https://lyricsovh.docs.apiary.io/#">lyrics.ovh API</a>
+    </p>
+  )
+}
 
 function Menu(){
   return(
@@ -230,8 +228,14 @@ function Menu(){
 }
 
 function Info(){
+  // let {thePath, theUrl} = useRouteMatch();
   return(
-    <h1>Info</h1>
+    <>
+      <Credit />
+      <button className="search-button">
+          Help
+      </button>
+    </>
   );
 }
 
