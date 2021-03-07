@@ -228,13 +228,15 @@ function Menu(){
 }
 
 function Info(){
-  // let {thePath, theUrl} = useRouteMatch();
+  let {thePath, theUrl} = useRouteMatch();
   return(
     <>
       <Credit />
-      <button className="search-button">
-          Help
-      </button>
+      <Link to={`${theUrl}/help`}>
+        <button className="search-button">
+            Help
+        </button>
+      </Link>
     </>
   );
 }
