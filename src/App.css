@@ -209,3 +209,7 @@
     left: 5%;
   }
 }
+
+.list{
+  list-style: inside;
+}

@@ -5,8 +5,7 @@ import React, { useEffect } from 'react'
 import {
   Switch,
   Route,
-  Link,
-  useRouteMatch
+  Link
 } from "react-router-dom"
 
 function App() {
@@ -228,7 +227,7 @@ function Menu(){
 }
 
 function Info(){
-  let {thePath, theUrl} = useRouteMatch();
+  // let {thePath, theUrl} = useRouteMatch();
   return(
     <>
       <Credit />
@@ -239,13 +238,27 @@ function Info(){
       </Link>
       <Switch>
         <Route path={`/trovalyric/info/help`}>
-          <p>
-            Help
-          </p>
+      
+            <Help />
+          
         </Route>
       </Switch>
     </>
   );
 }
 
+function Help(){
+  const steps = ["Type in the artist/band name.", "Type in the song.", "Click Search"];
+  const showSteps = steps.map(function(step){
+    return(<li>
+      {step}
+    </li>)
+  });
+
+  return(
+    <ol className="list">
+      {showSteps}
+    </ol>
+  );
+}
 export default App;
