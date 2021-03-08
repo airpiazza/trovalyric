@@ -13,11 +13,11 @@ function App() {
   return (
     <div className="App">
       <Switch>
-        <Route path="/info">
+        <Route path="/trovalyric/info">
         <Menu />
           <Info />
         </Route>
-        <Route path="/">
+        <Route path="/trovalyric">
           <Menu />
           <Header />
           <Description />
@@ -208,20 +208,20 @@ function Search(props){
 
 function Credit(){
   return(
-    <p className="credit">
+    <h1 className="credit">
       Trovalyric was made using the <a target="_blank" rel="noreferrer" href="https://lyricsovh.docs.apiary.io/#">lyrics.ovh API</a>
-    </p>
+    </h1>
   )
 }
 
 function Menu(){
   return(
     <header className="top-bar">
-      <Link to="/">
+      <Link to="/trovalyric">
         <img src={theLogo} alt="trovalyric logo" className="trovalyric-logo"/>
       </Link>
       <nav className="nav">
-        <Link to="/info">info</Link>
+        <Link to="/trovalyric/info">info</Link>
       </nav>
     </ header>
   )
@@ -232,11 +232,18 @@ function Info(){
   return(
     <>
       <Credit />
-      <Link to={`${theUrl}/help`}>
+      <Link to={`/trovalyric/info/help`}>
         <button className="search-button">
             Help
         </button>
       </Link>
+      <Switch>
+        <Route path={`/trovalyric/info/help`}>
+          <p>
+            Help
+          </p>
+        </Route>
+      </Switch>
     </>
   );
 }
