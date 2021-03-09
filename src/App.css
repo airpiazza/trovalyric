@@ -202,7 +202,7 @@
 
 @media(max-width: 645px){
   .nav{
-    right: -5%;
+    right: -10%;
   }
 
   .trovalyric-logo{
@@ -226,4 +226,21 @@
     margin-right: 25px;
     margin-left: 25px;
   }
+}
+
+.lingue{
+  display: flex;
+  justify-content: center;
+  column-gap: 1em;
+}
+
+.translation{
+  background-color: #491980;
+  color: white;
+  border-radius: 50px;
+  padding: 10px 2em;
+  font-size: 1rem;
+  border-style: solid;
+  border-color: #491980;
+  font-family: "Manrope", sans-serif;
 }

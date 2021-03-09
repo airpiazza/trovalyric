@@ -254,11 +254,21 @@ function Help(){
   });
 
   return(
-    <div className="list-box">
-      <ol>
-        {showSteps}
-      </ol>
-    </div>
+    <>
+      <div className="list-box">
+        <ol>
+          {showSteps}
+        </ol>
+      </div>
+      <div className="lingue">
+        <button className="translation">
+          English
+        </button>
+        <button className="translation">
+          Italiano
+        </button>
+      </div>
+    </>
   );
 }
 export default App;
