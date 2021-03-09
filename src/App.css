@@ -210,6 +210,20 @@
   }
 }
 
-.list{
-  list-style: inside;
+.list-box{
+  text-align: left;
+  display: flex;
+  justify-content: space-evenly;
+  font-size: 1.5rem;
+}
+
+@media(max-width: 915px){
+  .list-box{
+    margin-right: 50px;
+    margin-left: 50px;
+  }
+  .credit{
+    margin-right: 25px;
+    margin-left: 25px;
+  }
 }

@@ -250,15 +250,15 @@ function Info(){
 function Help(){
   const steps = ["Type in the artist/band name.", "Type in the song.", "Click Search"];
   const showSteps = steps.map(function(step){
-    return(<li>
-      {step}
-    </li>)
+    return(<li key={step}>{step}</li>)
   });
 
   return(
-    <ol className="list">
-      {showSteps}
-    </ol>
+    <div className="list-box">
+      <ol>
+        {showSteps}
+      </ol>
+    </div>
   );
 }
 export default App;
