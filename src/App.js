@@ -220,7 +220,7 @@ function Menu(){
         <img src={theLogo} alt="trovalyric logo" className="trovalyric-logo"/>
       </Link>
       <nav className="nav">
-        <Link to="/trovalyric/info">info</Link>
+        <Link to="/trovalyric/info" className="info">info</Link>
       </nav>
     </ header>
   )
