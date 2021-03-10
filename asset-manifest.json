@@ -1,23 +1,23 @@
 {
   "files": {
     "main.css": "/trovalyric/static/css/main.66557518.chunk.css",
-    "main.js": "/trovalyric/static/js/main.d255d02c.chunk.js",
-    "main.js.map": "/trovalyric/static/js/main.d255d02c.chunk.js.map",
+    "main.js": "/trovalyric/static/js/main.1260b37d.chunk.js",
+    "main.js.map": "/trovalyric/static/js/main.1260b37d.chunk.js.map",
     "runtime-main.js": "/trovalyric/static/js/runtime-main.43d1a1aa.js",
     "runtime-main.js.map": "/trovalyric/static/js/runtime-main.43d1a1aa.js.map",
-    "static/js/2.bcf9d0d6.chunk.js": "/trovalyric/static/js/2.bcf9d0d6.chunk.js",
-    "static/js/2.bcf9d0d6.chunk.js.map": "/trovalyric/static/js/2.bcf9d0d6.chunk.js.map",
+    "static/js/2.8dd329a6.chunk.js": "/trovalyric/static/js/2.8dd329a6.chunk.js",
+    "static/js/2.8dd329a6.chunk.js.map": "/trovalyric/static/js/2.8dd329a6.chunk.js.map",
     "static/js/3.a154bb51.chunk.js": "/trovalyric/static/js/3.a154bb51.chunk.js",
     "static/js/3.a154bb51.chunk.js.map": "/trovalyric/static/js/3.a154bb51.chunk.js.map",
     "index.html": "/trovalyric/index.html",
     "static/css/main.66557518.chunk.css.map": "/trovalyric/static/css/main.66557518.chunk.css.map",
-    "static/js/2.bcf9d0d6.chunk.js.LICENSE.txt": "/trovalyric/static/js/2.bcf9d0d6.chunk.js.LICENSE.txt",
+    "static/js/2.8dd329a6.chunk.js.LICENSE.txt": "/trovalyric/static/js/2.8dd329a6.chunk.js.LICENSE.txt",
     "static/media/t_logo.1746a23c.png": "/trovalyric/static/media/t_logo.1746a23c.png"
   },
   "entrypoints": [
     "static/js/runtime-main.43d1a1aa.js",
-    "static/js/2.bcf9d0d6.chunk.js",
+    "static/js/2.8dd329a6.chunk.js",
     "static/css/main.66557518.chunk.css",
-    "static/js/main.d255d02c.chunk.js"
+    "static/js/main.1260b37d.chunk.js"
   ]
 }
