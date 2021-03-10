@@ -1,7 +1,7 @@
 // import logo from './logo.svg';
 import theLogo from './t_logo.png';
 import './App.css';
-import React, { useEffect } from 'react'
+import React, { useEffect, useReducer } from 'react'
 import {
   Switch,
   Route,
@@ -247,24 +247,45 @@ function Info(){
   );
 }
 
+const initialLanguageState = {language: ["Type in the artist/band name.", "Type in the song.", "Click Search."].map(function(step){
+  return(<li key={step}>{step}</li>)
+})};
+
+function languageReducer(languageState, theAction){
+  switch (theAction.type) {
+    case 'Eng':
+        return {language: ["Type in the artist/band name.", "Type in the song.", "Click Search."].map(function(step){
+          return(<li key={step}>{step}</li>)
+        })};
+    case 'Ita':
+        return {language: ["Digita il nome dell'artista.", "Digita il titolo della canzone.", "Ricerca di scatto."].map(function(step){
+          return(<li key={step}>{step}</li>)
+        })};
+    default:
+      throw new Error();
+  }
+}
+
 function Help(){
-  const steps = ["Type in the artist/band name.", "Type in the song.", "Click Search"];
-  const showSteps = steps.map(function(step){
-    return(<li key={step}>{step}</li>)
-  });
+  // const steps = ["Type in the artist/band name.", "Type in the song.", "Click Search"];
+  // const showSteps = steps.map(function(step){
+  //   return(<li key={step}>{step}</li>)
+  // });
+
+  const [theState, theDispatch] = useReducer(languageReducer, initialLanguageState);
 
   return(
     <>
       <div className="list-box">
         <ol>
-          {showSteps}
+          {theState.language}
         </ol>
       </div>
       <div className="lingue">
-        <button className="translation">
+        <button className="translation" onClick={() => theDispatch({type: 'Eng'})}>
           English
         </button>
-        <button className="translation">
+        <button className="translation" onClick={() => theDispatch({type: 'Ita'})}>
           Italiano
         </button>
       </div>
