@@ -12,11 +12,11 @@ function App() {
   return (
     <div className="App">
       <Switch>
-        <Route path="/trovalyric/info">
+        <Route path="/info">
         <Menu />
           <Info />
         </Route>
-        <Route path="/trovalyric">
+        <Route path="">
           <Menu />
           <Header />
           <Description />
@@ -216,11 +216,11 @@ function Credit(){
 function Menu(){
   return(
     <header className="top-bar">
-      <Link to="/trovalyric">
+      <Link to="">
         <img src={theLogo} alt="trovalyric logo" className="trovalyric-logo"/>
       </Link>
       <nav className="nav">
-        <Link to="/trovalyric/info" className="info">info</Link>
+        <Link to="/info" className="info">info</Link>
       </nav>
     </ header>
   )
@@ -231,13 +231,13 @@ function Info(){
   return(
     <>
       <Credit />
-      <Link to={`/trovalyric/info/help`}>
+      <Link to={`/info/help`}>
         <button className="search-button">
             Help
         </button>
       </Link>
       <Switch>
-        <Route path={`/trovalyric/info/help`}>
+        <Route path={`/info/help`}>
       
             <Help />
           
